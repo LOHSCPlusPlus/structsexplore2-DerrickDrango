@@ -12,6 +12,7 @@ struct Triangle {
     Triangle();
     Triangle(Point p0, Point p1, Point p2);
 };
+
 Point::Point() {
 	x = 0;
 	y = 0;
@@ -45,7 +46,7 @@ void PrintTriangle(Triangle t) {
 // Rotates the triangle 90 degrees counter-clockwise around
 // the origin. To rotate a triangle you swap the x/y values
 // of the points & change the sign of y as you swap it.
-void RotateTriangle(Triangle &t) {
+void RotateTriangle(Triangle t) {
     for (int index = 0; index < 3; index++) {
         double temp = t.points[index].x;
         t.points[index].x = -1.0 * t.points[index].y;
